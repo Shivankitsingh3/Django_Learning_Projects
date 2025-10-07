@@ -1,0 +1,24 @@
+{% extends "book/base.html" %}
+{% load static %}
+
+{% block title %}Book Form{% endblock  %}
+
+{% block content %}
+
+<form action="" method="POST" novalidate>
+  {% csrf_token %}
+  {{form.as_p}}
+  <div class="mt-4">
+    <button type="submit" class="w-25 h-8 bg-blue-500 hover:bg-blue-600 focus:bg-blue-500 focus:ring-blue-500 text-white font-bold rounded">Save</button>
+  </div>
+</form>
+{% if messages %}
+  {% for message in messages %}
+    <div class="w-full h-10 bg-green-200 flex flex-row justify-between items-center px-2 my-3 rounded">
+      <span>{{message}}</span>
+    </div>
+  {% endfor %}
+
+{% endif %}
+
+{% endblock content %}

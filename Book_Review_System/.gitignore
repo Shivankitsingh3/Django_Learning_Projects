@@ -1,0 +1,69 @@
+# -------------------------------------------------------------------
+# Django, Python, and Node/NPM .gitignore
+# -------------------------------------------------------------------
+
+# 1. Environment, Dependencies, and Node Artifacts
+# Node.js/NPM (for Tailwind, asset compilation, etc.)
+/node_modules/
+npm-debug.log*
+yarn-error.log
+.pnpm-store
+
+# Python Virtual Environments
+/venv/
+.venv/
+/env/
+
+# Dependency Management Files (often regenerated)
+poetry.lock
+Pipfile.lock
+
+# 2. Python Specific Files
+# Compiled Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Testing and Cache
+.coverage
+.cache
+.pytest_cache/
+.tox/
+
+# 3. Django Specific Files
+# Database file (SQLite)
+*.sqlite3
+
+# Build/Generated Assets
+# The directories where 'collectstatic' and front-end builds go.
+/static_collected/
+/media/
+/staticfiles/
+*.mo
+*.po
+*.pot
+/dist/ # Common front-end build output directory
+
+# 4. Local Configuration and Secrets
+# Files containing sensitive data or local development settings
+.env
+.env.local
+.secret
+local_settings.py
+settings_local.py
+config/secrets.yml
+
+# 5. Build, System, and IDE Files
+# Logs and Temporary Files
+*.log
+*.tmp
+*.bak
+
+# Operating System Files
+.DS_Store      # macOS
+Thumbs.db      # Windows
+
+# IDE/Editor Specific Files (personal preferences)
+.idea/         # JetBrains IDEs (PyCharm, IntelliJ)
+.vscode/       # VS Code settings (unless shared)
+*.swp          # Vim swap files
